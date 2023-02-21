@@ -1,3 +1,10 @@
 .btm-border {
     border-bottom: 5px solid #61dafb;
 }
+.txt-center {
+    text-align: center;
+}
+
+.m-btm-10 {
+margin-bottom: 10px;
+}

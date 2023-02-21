@@ -1,0 +1,19 @@
+.page-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.add-post {
+    color: white;
+    background: #20232a;;
+    padding-top: 10px;
+    width: 50%;
+    text-align: center;
+    margin-top: 100px;
+    h1 {
+        border-bottom: 5px solid #61dafb;
+    }
+    form {
+        padding-top: 100px;
+    }
+}
