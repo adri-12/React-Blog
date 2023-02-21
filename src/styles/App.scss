@@ -1,0 +1,19 @@
+@import '../styles/navbar.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+  }
+
+  .page-layout {
+    color: white;
+    background: #20232a;;
+    margin: 60px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
