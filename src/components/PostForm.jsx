@@ -1,23 +1,34 @@
-import React from "react";
-import NewestArticles from "../components/NewestArticles";
-import TrendingArticles from "../components/TrendingArticles";
+import { useState } from 'react';
+import ArticleItem from "./ArticleItem";
 
-import "../styles/App.scss";
-import "../styles/add-post.scss";
+const Articles = () => {
+  const [articles, setArticles] = useState([ title, description, content, category]);
+}
 
-function Addpost() {
-  return (
-    <>
-      <div className="page-layout">
-        <NewestArticles />
-        <div className="add-post">
-          <h1>Write An Article</h1>
-          <div className="form-container">
-            <div className="logo-text">
-              <img src="\logo512.png" alt="React" />
-              <span>Get Inspired</span>
-            </div>
-            <form action="create-a-post" method="post">
+function AddArticle() {
+    const [ formData, setFormData ] = useState({
+        title: '',
+        description: '',
+        content: '',
+        category: 'Fitness'
+    });
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        // Preia valorile din formular
+        const { title, description, content, category } = event.target.elements;
+        const newFormData = {
+            title: title.value,
+            description: description.value,
+            content: content.value,
+            category: category.value
+        };
+        setFormData(newFormData);
+    };
+
+    return (
+        <div>
+        <form onSubmit={ handleFormSubmit } action="create-a-post" method="post">
               <ul>
                 <li>
                   <label htmlFor="title">Article Title:</label>
@@ -61,13 +72,9 @@ function Addpost() {
               <button type="submit" className="btn-submit m-top-20">
                 Create Article
               </button>
-            </form>
-          </div>
-        </div>
-        <TrendingArticles />
-      </div>
-    </>
-  );
+            </form> 
+            </div>
+    );
 }
 
-export default Addpost;
+export default AddArticle;

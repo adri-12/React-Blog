@@ -1,0 +1,32 @@
+.article-components-container {
+    padding-top: 10px;
+    color: white;
+    width: 20%;
+    background: #20232a;
+    text-align: center;
+    margin: 100px 20px;
+    padding-bottom: 20px;
+  
+    h2 {
+  
+      border-bottom: 5px solid #61dafb;
+    }
+  
+    h3 {
+      margin-bottom: 10px;
+    }
+  
+    .items-container {
+      margin-top: 20px;
+  
+      .item {
+        margin-left: 40px;
+        margin-bottom: 20px;
+        height: 200px;
+        width: 300px;
+        color: #fff;
+        padding: 10px;
+        border: solid 3px #61dafb;
+      }
+    }
+  }

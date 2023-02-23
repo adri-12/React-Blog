@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "../pages/Home";
-import Addpost from "../pages/Addpost";
+import Addpost from "./Addpost";
 import Posts from "../pages/Posts";
 import { Link, Routes, Route } from 'react-router-dom';
 
@@ -16,16 +16,12 @@ const Navbar = () => {
                 <li>
                     <Link to="/Posts" className="nav-links">Articles</Link>
                 </li>
-                <li>
-                    <Link to="/Addpost" className="nav-links">Write an article</Link>
-                </li>
             </ul>
             </nav>
             
             <Routes>
             <Route path="/Home/*" element={<Home />} />
             <Route path="/Posts/*" element={<Posts />} />
-            <Route path="/Addpost/*" element={<Addpost />} />
             </Routes>
         </div>
             

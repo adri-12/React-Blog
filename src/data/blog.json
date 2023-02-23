@@ -1,0 +1,11 @@
+{
+    "article": [
+        {
+            "id": 1,
+            "title": "Title here",
+            "content": "Content here",
+            "likes": "30",
+            "category": "Fitness"
+        }
+    ]
+}

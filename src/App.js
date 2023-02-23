@@ -2,6 +2,7 @@ import './styles/App.scss';
 import Navbar from "./components/Navbar.js";
 import NewestArticles from './components/NewestArticles';
 import TrendingArticles from './components/TrendingArticles';
+import AddPost from './components/Addpost';
 
 function App() {
   return (
@@ -9,11 +10,7 @@ function App() {
       <Navbar />
       <div className='App'>
       <NewestArticles />
-      <div className='middle-section'>
-        <h1>Get The Knowledge You Need</h1>
-        <h2>Click Bellow To Get Started.</h2>
-        <button>YOUR JOURNEY STARTS HERE</button>
-      </div>
+      <AddPost />
       <TrendingArticles />
       </div>
       </>
