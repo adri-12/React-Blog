@@ -5,7 +5,7 @@ const Posts = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch('http://localhost:3000/article');
+      const res = await fetch('http://localhost:3000/posts');
       const data = await res.json();
       setPosts(data);
     }
@@ -13,9 +13,9 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
-function Posts() {
-    return (
-      <div>
+  return (
+      <div className='article-list'>
+        <h1>TEST</h1>
         {posts.map(post =>
           <div key={post.id}>
             <h3>{post.title}</h3>
@@ -26,5 +26,5 @@ function Posts() {
       </div>
     );
   }
-}
+
   export default Posts;

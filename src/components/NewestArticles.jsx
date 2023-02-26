@@ -1,6 +1,4 @@
-import React from "react";
 import ArticleItem from "./ArticleItem";
-import Blockquote from "./Blockquote";
 import '../styles/helper-classes.css';
 import '../styles/card-layout.scss';
 

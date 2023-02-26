@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import './styles/App.scss';
 import Navbar from "./components/Navbar.js";
 import NewestArticles from './components/NewestArticles';
 import TrendingArticles from './components/TrendingArticles';
-import AddPost from './components/Addpost';
+import AddArticle from './components/AddArticle';
+import Posts from './pages/Posts';
 
 function App() {
   return (
@@ -10,10 +12,10 @@ function App() {
       <Navbar />
       <div className='App'>
       <NewestArticles />
-      <AddPost />
+      <AddArticle />
       <TrendingArticles />
       </div>
-      </>
+    </>
   );
 }
 
