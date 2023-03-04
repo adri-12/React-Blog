@@ -1,8 +1,4 @@
 import { useState } from 'react';
-import "../styles/App.scss";
-import "../styles/add-post.scss";
-
-
 
 const AddArticle = () => {
 

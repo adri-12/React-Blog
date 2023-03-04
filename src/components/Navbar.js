@@ -1,28 +1,17 @@
-import Posts from "../pages/Posts";
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    return (
-        <div>
-            <nav>
+    return ( 
+        <nav className='navbar'>
             <Link to="/" >
-                <img className="logo" src="logo512.png" alt="React" />
-                </Link>
-                 <h3 className="h3-nav">React Blog</h3>
-            <ul>
-                <li>
-                    <Link to="/Posts" className="nav-links">Articles</Link>
-                </li>
-            </ul>
-            </nav>
-            
-            <Routes>
-            <Route path="/Posts/*" element={<Posts />} />
-            </Routes>
-        </div>
-            
-
-    );
-};
-
+                 <img className="logo" src="/logo512.png" alt="React" />
+            </Link>
+            <div className="links">
+            <Link to="/">Home</Link>
+            <Link to="/create">New Article</Link>
+            </div>
+        </nav>
+     );
+}
+ 
 export default Navbar;

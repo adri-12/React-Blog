@@ -1,21 +1,23 @@
-import { useState } from 'react';
-import './styles/App.scss';
-import Navbar from "./components/Navbar.js";
-import NewestArticles from './components/NewestArticles';
-import TrendingArticles from './components/TrendingArticles';
-import AddArticle from './components/AddArticle';
-import Posts from './pages/Posts';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import Create from './Components/Create';
+import BlogDetails from './Components/BlogDetails';
+import NotFound from './Components/NotFound';
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <div className='App'>
-      <NewestArticles />
-      <AddArticle />
-      <TrendingArticles />
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/blogs/:id" element={<BlogDetails />}/>
+          <Route path="*" element={<NotFound />}/>
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 }
 

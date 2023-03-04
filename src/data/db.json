@@ -1,0 +1,16 @@
+{
+    "blogs": [
+      {
+        "title": "First Article",
+        "body": "Here Content",
+        "author": "adi",
+        "id": 1
+      },
+      {
+        "title": "Second Article",
+        "body": "Here Content",
+        "author": "Marian",
+        "id": 2
+      }
+    ]
+  }
