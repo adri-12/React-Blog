@@ -4,13 +4,16 @@ import { useNavigate } from 'react-router-dom';
 const Create = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [author, setAuthor] = useState('mario');
+    const [author, setAuthor] = useState('');
+    const categories = ['Fitness', 'Nutrition', 'Physiology', 'Other'];
+    const [category, setCategory] = useState(categories[0]);
+
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { title, content, author }; // adding inputs like category
+        const blog = { title, content, author, category }; // adding inputs like category
 
         setIsPending(true);
 
@@ -35,6 +38,14 @@ const Create = () => {
                     required
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    minLength="10"
+                />
+                <label>Post author:</label>
+                <input 
+                    type="text"
+                    required
+                    value={author}
+                    onChange={(e) => setAuthor(e.target.value)}
                 />
                 <label>Post content:</label>
                 <textarea
@@ -42,15 +53,18 @@ const Create = () => {
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                 ></textarea>
-                <label>Post author:</label>
+                <label>Post category:</label>
                 <select
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)}
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
                 >
-                    <option value="mario">mario</option>
-                    <option value="yoshi">yoshi</option>
+                    {categories.map((option) => (
+                        <option key={option} value={option}>
+                            {option}
+                        </option>
+                    ))}
                 </select>
-                { !isPending && <button>Add Post</button> }
+                { !isPending && <button className='btn-submit'><span>Add Post</span><i></i></button> }
                 { isPending && <button disabled>Adding post...</button> }
             </form>
         </div>

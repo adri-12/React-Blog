@@ -5,7 +5,7 @@ import Create from './Components/Create';
 import BlogDetails from './Components/BlogDetails';
 import NotFound from './Components/NotFound';
 
-function App() {
+function App() {  
   return (
     <Router>
       <Navbar />

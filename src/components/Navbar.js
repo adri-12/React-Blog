@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
+    const currentPath = window.location.pathname;
+
+    if (currentPath === '*') {
+        return null;
+    }
+
     return ( 
         <nav className='navbar'>
             <Link to="/" >
