@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# React Blogging Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application that allows users to create new blog posts and display them. The application uses React Router, useState, useNavigate, useEffect and useFetch hooks.
 
-## Available Scripts
+## Getting Started
+Install Node.js on your system if you haven't already.
 
-In the project directory, you can run:
+To get started, clone this repository and run npm install to install the dependencies. Then, run npm start to start the application. The application will be available at http://localhost:3000.
 
-### `npm start`
+open a terminal or command prompt and run the following command to install the JSON server package globally:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+"npm install -g json-server"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This command will install the latest version of the JSON server globally on your system.
+Start the JSON server by running the following command in the terminal, pointing to the directory where the db.json file is located and "--port 8000" specifies the port number on which the JSON server will run:
 
-### `npm test`
+"json-server --watch db.json --port 8000"
+This command will start the JSON server and watch the db.json file for changes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Usage
+### Creating a New Post
 
-### `npm run build`
+To create a new post, click on the "New Article" button in the navigation bar. This will take you to the create post page where you can enter a post title, author name, content, and select a category. To submit the new post, click on the "Add Post" button.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Displaying Posts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+On the home page, you can view a list of all the blog posts that have been created. Click on a post title to view the full post.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deleting Posts
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can delete a post by clicking on the delete button on the post preview.
