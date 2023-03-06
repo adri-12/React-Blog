@@ -1,15 +1,15 @@
-import { useNavigate } from "react-router-dom";
-import '../styles/blog-list.scss';
+import { useState } from "react";
 
-const BlogList = ({ blogs, title }) => {
-  const navigate = useNavigate();
+const RecentArticles = ({blogs, title}) => {
 
-  function handleClick(id) {
-    navigate(`/blogs/${id}`);
-  }
+    const sortedBlogs = blogs.sort((a, b) => {
+        return new Date(b.createdAt) - new Date(a.createdAt);
+    });
 
-  return (
-    <div className="blog-list">
+    const recentBlogs = sortedBlogs.slice(0, 5);
+
+    return ( 
+        <div className="layout">
       <h1 className="blog-title">{title}</h1>
       <span></span>
       {blogs.map((blog) => (
@@ -23,8 +23,8 @@ const BlogList = ({ blogs, title }) => {
           <div className="article-date">Date: {blog.date} </div>
         </div>
       ))}
-    </div>
-  );
-};
-
-export default BlogList;
+        </div>
+     );
+}
+ 
+export default RecentArticles;

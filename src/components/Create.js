@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import '../styles/create.scss';
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -8,7 +9,6 @@ const Create = () => {
   const categories = ["Fitness", "Nutrition", "Physiology", "Other"];
   const [category, setCategory] = useState(categories[0]);
 
-  const articleDate = new Date().toISOString(); // get current date
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth() + 1; // indexul lunii începe de la 0
@@ -29,7 +29,6 @@ const Create = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
     }).then(() => {
-      console.log("new blog added");
       setIsPending(false);
       navigate("/");
     });

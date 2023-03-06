@@ -1,0 +1,40 @@
+/* create new blog form */
+.create {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  
+    label {
+      text-align: left;
+      display: block;
+    }
+  
+    h2 {
+      font-size: 20px;
+      color: #61dafb;
+      margin-bottom: 30px;
+    }
+  
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 6px 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      display: block;
+      outline: none;
+    }
+  
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #61dafb;
+    }
+  
+    select {
+      margin-bottom: 50px;
+    }
+  
+  }
+  
