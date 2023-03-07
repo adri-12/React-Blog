@@ -1,6 +1,7 @@
 import BlogList from "./BlogList";
 import RecentArticles from "./RecentArticles";
 import useFetch from "./useFetch";
+import TrendingArticles from "./TrendingArticles";
 
 const Home = () => {
     // eslint-disable-next-line
@@ -12,7 +13,7 @@ const Home = () => {
             { isPending && <div className="loader">Loading...</div> }
             {blogs && <RecentArticles blogs={blogs} title="Trending Articles" />}
             {blogs && <BlogList blogs={blogs} title= "All Posts Are Here!" />}
-            {blogs && <RecentArticles blogs={blogs} title="Recent Articles" />}
+            {blogs && <TrendingArticles blogs={blogs} title="Recent Articles" />}
         </div>
      );
 }

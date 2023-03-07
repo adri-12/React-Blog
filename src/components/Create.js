@@ -20,7 +20,7 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const blog = { title, content, author, category, date }; // create new post objects
+    const blog = { title, content, author, category, date, likes }; // create new post objects
 
     setIsPending(true);
 
