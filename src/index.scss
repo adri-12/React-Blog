@@ -76,12 +76,14 @@ body {
 }
 // Home style
 .content {
-  padding-top: 200px;
+  width: 100%;
+  padding-top: 50px;
   height: 80vh;
   margin: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+// background: blue; componenta home este doar in partea de sus a paginii
+  
 }
 
 

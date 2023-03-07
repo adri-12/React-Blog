@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import Create from './Components/Create';
 import BlogDetails from './Components/BlogDetails';
 import NotFound from './Components/NotFound';
+import RecentArticles from './Components/RecentArticles';
 
 function App() {  
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/create" element={<Create />} />
           <Route path="/blogs/:id" element={<BlogDetails />}/>
           <Route path="*" element={<NotFound />}/>
+          <Route path="/blogs/:id" element={<RecentArticles />}/>
         </Routes>
       </div>
     </Router>

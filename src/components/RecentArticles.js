@@ -1,30 +1,13 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
+import '../styles/recent-articles.scss';
 
-const RecentArticles = ({blogs, title}) => {
-
-    const sortedBlogs = blogs.sort((a, b) => {
-        return new Date(b.createdAt) - new Date(a.createdAt);
-    });
-
-    const recentBlogs = sortedBlogs.slice(0, 5);
-
-    return ( 
-        <div className="layout">
-      <h1 className="blog-title">{title}</h1>
-      <span></span>
-      {blogs.map((blog) => (
-        <div
-          className="blog-preview"
-          key={blog.id}
-          onClick={() => handleClick(blog.id)}
-        >
-          <h2>{blog.title}</h2>
-          <p>Written by {blog.author}</p>
-          <div className="article-date">Date: {blog.date} </div>
+const RecentArticles = ({blogs}) => {
+  return (   
+        <div className="recent-articles">
+          <BlogList blogs={blogs} title="Recent Blogs" />
         </div>
-      ))}
-        </div>
-     );
+ );
 }
  
 export default RecentArticles;

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import '../styles/blog-list.scss';
+import RecentArticles from "./RecentArticles";
 
 const BlogList = ({ blogs, title }) => {
   const navigate = useNavigate();

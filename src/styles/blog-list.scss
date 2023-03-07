@@ -1,8 +1,6 @@
 // BlogList
   /* blog previews / list */
   .blog-list {
-    margin-top: 100px;
-    perspective: 1000px;
     padding: 50px 0;
     display: flex;
     flex-direction: column;
@@ -25,10 +23,10 @@
       font-size: 12px;
     }
     .blog-preview {
-      position: relative;
-      transform-style: preserve-3d;
-      transform: rotateX(45deg);
-      padding: 50px 150px;
+      padding: 20px;
+      margin-bottom: 20px;
+      min-width: 400px;
+      width: 100%;
       border-bottom: 2px solid #61dafb;
       background: #20232a;
 

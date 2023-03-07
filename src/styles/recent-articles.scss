@@ -1,0 +1,17 @@
+.recent-articles {
+    margin-left: 20px;
+    width: 25%;
+    .blog-list {
+        perspective: none;
+        background: rgba(128, 128, 128, 0.507);
+        border: 1px solid #61dafb;
+        box-shadow: 1px 3px 5px rgb(9, 213, 240);
+        .blog-preview {
+        width: 80%;
+        transition: transform 0.5s;
+        &:hover {
+            transform: scale(0.9);
+        }
+        }
+    }
+}

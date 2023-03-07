@@ -1,4 +1,5 @@
 import BlogList from "./BlogList";
+import RecentArticles from "./RecentArticles";
 import useFetch from "./useFetch";
 
 const Home = () => {
@@ -9,7 +10,9 @@ const Home = () => {
         <div className="content">
             { error && <div>{ error }</div> }
             { isPending && <div className="loader">Loading...</div> }
+            {blogs && <RecentArticles blogs={blogs} title="Trending Articles" />}
             {blogs && <BlogList blogs={blogs} title= "All Posts Are Here!" />}
+            {blogs && <RecentArticles blogs={blogs} title="Recent Articles" />}
         </div>
      );
 }
