@@ -1,0 +1,33 @@
+.footer {
+    text-align: center;
+    background: #20232a;
+    margin-top: 50px;
+    min-height: 100px;
+    padding-top: 10px;
+    color: #fff;
+    .copyright {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    .logo {
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+        &:hover {
+            transform: scale(1.08);
+          }
+}
+.social-media {
+    margin-left: 30vh;
+    span {
+    margin-right: 10px;
+    }
+}
+}
+}

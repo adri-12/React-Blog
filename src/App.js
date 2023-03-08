@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className="content">
+      <>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="*" element={<NotFound />}/>
           <Route path="/blogs/:id" element={<RecentArticles />}/>
         </Routes>
-      </div>
+      </>
     </Router>
   );
 }

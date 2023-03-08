@@ -2,12 +2,14 @@ import BlogList from "./BlogList";
 import RecentArticles from "./RecentArticles";
 import useFetch from "./useFetch";
 import TrendingArticles from "./TrendingArticles";
+import Footer from "./Footer";
 
 const Home = () => {
     // eslint-disable-next-line
     const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs');
 
     return ( 
+        <>
         <div className="content">
             { error && <div>{ error }</div> }
             { isPending && <div className="loader">Loading...</div> }
@@ -15,6 +17,8 @@ const Home = () => {
             {blogs && <BlogList blogs={blogs} title= "All Posts Are Here!" />}
             {blogs && <TrendingArticles blogs={blogs} title="Recent Articles" />}
         </div>
+        {blogs && <Footer blogs={blogs} title="Recent Articles" />}
+        </>
      );
 }
  
