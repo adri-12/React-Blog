@@ -9,7 +9,7 @@
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   
     .logo {
       width: 50px;
@@ -22,13 +22,15 @@
   
     .links {
       display: flex;
-      margin-left: 30vh;
-  
+      justify-content: space-around;
+      width: 15%;
+
       a {
         font-size: 20px;
-        padding: 0 20px;
+       // padding: 0 20px;
         text-decoration: none;
         color: white;
+        font-weight: bold;
   
         &:hover {
           color: #61dafb;
@@ -36,4 +38,18 @@
         }
       }
     }
+
+    .burger {
+      display: none;  
+      cursor: pointer; 
+      div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 5px;
+    }
   }
+  .nav-active {
+    transform: translateX(0%);
+  }
+}
