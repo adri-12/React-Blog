@@ -16,12 +16,13 @@ const BlogList = ({ blogs, title }) => {
         <div
           className="blog-preview"
           key={blog.id}
-          onClick={() => handleClick(blog.id)}
-        >
+          onClick={() => handleClick(blog.id)}>
           <h2>{blog.title}</h2>
           <p>Written by {blog.author}</p>
-          <div className="article-date">Date: {blog.date} </div>
-        { /* <span>Likes: { blog.likes }</span> */}
+          <div className="date-plus-likes">
+          <span className="likes-date">Date: {blog.date}</span>
+          <span className="likes-date">Likes: { blog.likes }</span>
+          </div>
         </div>
       ))}
     </div>

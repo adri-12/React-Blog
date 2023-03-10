@@ -5,6 +5,7 @@ import Create from './Components/Create';
 import BlogDetails from './Components/BlogDetails';
 import NotFound from './Components/NotFound';
 import RecentArticles from './Components/RecentArticles';
+import Footer from './Components/Footer';
 
 function App() {  
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/blogs/:id" element={<RecentArticles />}/>
         </Routes>
       </>
+      <Footer />
     </Router>
   );
 }

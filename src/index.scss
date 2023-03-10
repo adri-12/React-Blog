@@ -20,37 +20,6 @@ body {
   }
 }
 
-@media screen and (max-width:768px) {
-  body {
-    overflow-x: hidden;
-  }
-.links {
-  position: absolute;
-  right: 0;
-  height: 92vh;
-  top: 8vh;
-  background: #20232a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in;
-  a {
-    opacity: 0;
-  }
-}
-.navbar .burger {
-  display: block;
-}
-}
-
-@media screen and (max-width:1024px) {
-  .links{
-    width: 60%;
-  }
-}
-
 // Page Loader / Loading Message
 .loader {
   width: 250px;
@@ -111,9 +80,13 @@ body {
   margin-top: 100px;
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 // background: blue; componenta home este doar in partea de sus a paginii
-  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 

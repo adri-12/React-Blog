@@ -6,7 +6,8 @@
       "author": "Adrian",
       "category": "Fitness",
       "date": "2023-3-3",
-      "id": 5
+      "id": 5,
+      "likes": 1
     },
     {
       "title": "Second Article",
@@ -14,7 +15,8 @@
       "author": "Marian",
       "category": "Other",
       "date": "2023-3-4",
-      "id": 6
+      "id": 6,
+      "likes": 3
     },
     {
       "title": "Third Post",

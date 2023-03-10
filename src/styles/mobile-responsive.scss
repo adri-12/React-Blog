@@ -1,0 +1,52 @@
+@media screen and (max-width:768px) {
+    body {
+      overflow-x: hidden;
+    }
+  .links {  
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background: #20232a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    a {
+      opacity: 0;
+      color: red;
+    }
+  }
+  .burger {
+    display: block;
+  }
+
+  .create {
+    width: 50%;
+    // Select-option width dosen't work
+    select:after {
+      max-width: 50px;
+    }
+  }
+
+  //Home
+  .recent-articles {
+    display: none;
+  }
+  .blog-list {
+margin: 0 auto;
+  }
+    .blog-preview {
+min-width: 100%;
+
+    }
+  }
+
+  
+  @media screen and (max-width:1024px) {
+    .links{
+      width: 60%;
+    }
+  }
