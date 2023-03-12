@@ -3,15 +3,21 @@
   padding-top: 100px;
     article {
       margin: 0 auto;
-      width: 800px;
+      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: left;
     
       span {
         margin-bottom: 20px;
       }
-  
+      button {
+        margin-bottom: 20px;
+      }
+  div p {
+    color: #000;
+  }
       p {
         color: gray;
       }
@@ -26,7 +32,59 @@
     div {
       margin: 20px 0;
     }
+// Like Button 
+
+.like-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  margin-left: 30%;
+}
+
+.like-button svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+  fill: #999;
+  transition: all 0.2s;
+}
+
+.like-button:hover svg {
+  transform: scale(1.1);
+}
+
+.like-button.clicked svg {
+  fill: #61dafb;
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like-count {
+  margin-left: 0.25em;
+  color: #999;
+  transition: all 0.2s;
+}
+
+.like-button.clicked .like-count {
+  color: #61dafb;
+}
+}
   
   // Button Style
   
@@ -102,4 +160,23 @@
   .btn-submit:hover i::after {
     width: 20px;
     left: 80%;
+  }
+
+
+  @media screen and (max-width:768px) {
+.blog-details {
+  article {
+    div p {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    .like-button {
+  font-size: 24px;
+  margin-left: 70%;
+    }
+  }
+    }
   }

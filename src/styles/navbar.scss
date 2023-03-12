@@ -25,23 +25,19 @@
       display: flex;
       justify-content: space-around;
       width: 15%;
-
       a {
         font-size: 20px;
-       // padding: 0 20px;
         text-decoration: none;
         color: white;
         font-weight: bold;
-  
         &:hover {
           color: #61dafb;
           transition: color 0.2s ease-out;
         }
       }
     }
-
     .burger {
-      display: none;  
+      display: none; 
       cursor: pointer; 
       div {
       width: 25px;
@@ -50,7 +46,42 @@
       margin: 5px;
     }
   }
-  .nav-active {
-    transform: translateX(0%);
+}
+
+@media screen and (max-width:768px) {
+ .navbar {
+  .links {  
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background: #20232a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    a {
+      opacity: 0;
+    } 
+  .burger {
+    display: block;
+  }
+.nav-active {
+  transform: translateX(0%);
+}
+  }
+
+@keyframes links {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px)
   }
 }
+    }
+  }

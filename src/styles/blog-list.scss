@@ -59,3 +59,16 @@
       }
     }
   }
+
+  @media screen and (max-width:768px) {
+    .recent-articles {
+      display: none;
+    }
+    .blog-list {
+  margin: 0 auto;
+  
+    }
+      .blog-preview {
+  min-width: 100%;
+      }
+    }

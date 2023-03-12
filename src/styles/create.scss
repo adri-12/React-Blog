@@ -39,3 +39,12 @@
   
   }
   
+  @media screen and (max-width:768px) {
+  .create {
+    width: 50%;
+    // Select-option width dosen't work
+    select:after {
+      max-width: 50px;
+    }
+  }
+}

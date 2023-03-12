@@ -7,7 +7,7 @@
       "category": "Fitness",
       "date": "2023-3-3",
       "id": 5,
-      "likes": 1
+      "likes": 3
     },
     {
       "title": "Second Article",
@@ -16,7 +16,7 @@
       "category": "Other",
       "date": "2023-3-4",
       "id": 6,
-      "likes": 3
+      "likes": 2
     },
     {
       "title": "Third Post",
@@ -33,14 +33,6 @@
       "category": "Physiology",
       "date": "2023-3-6",
       "id": 9
-    },
-    {
-      "title": "Test Postss",
-      "content": "asasdasd",
-      "author": "adsasdasd",
-      "category": "Physiology",
-      "date": "2023-3-7",
-      "id": 10
     },
     {
       "title": "test post 45666",
